@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css" class="css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <link rel="icon" href="Logo.png" class="image/png">
+</head>
+<body>
+  <img src="Logo.png" alt="Logo">
+  <h2>Login</h2>
+  <div>
+    <p>Username:</p> <input type="text" id="username">
+    <p>Password:</p> <input type="password" id="password">
+    <br>
+    <input type="checkbox" id="ingatSaya"> Ingat saya
+  </div>
+  <br>
+  <button onclick="cekLogin()">Login</button>
+  <p>Gak punya akun?<a href="register.html">register</a></p>
+
+  <script>
+    // Auto-isi jika pernah disimpan
+    window.onload = function() {
+      if (localStorage.getItem("ingat") === "true") {
+        document.getElementById("username").value = localStorage.getItem("username");
+        document.getElementById("password").value = localStorage.getItem("password");
+        document.getElementById("ingatSaya").checked = true;
+      }
+    }
+
+    function cekLogin() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const ingat = document.getElementById("ingatSaya").checked;
+
+      if (!user || !pass) {
+        alert("Username atau sandi belum diisi!");
+        return;
+      }
+
+      if (ingat) {
+        localStorage.setItem("username", user);
+        localStorage.setItem("password", pass);
+localStorage.setItem("ingat", true);
+      } else {
+        localStorage.clear();
+      }
+
+      alert("Login berhasil!");
+      window.location.href = "Dashbord.html"; // aktifkan jika perlu
+    }
+  </script>
+</body>
+</html>

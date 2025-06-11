@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Register.css" class="css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Register</title>
+</head>
+<body>
+  <img src="Logo.png" alt="Logo">
+  <h2>Register</h2>
+<div>
+  <p>Username: </p><input type="text" id="regUser" placeholder="Username">
+<p>Password: </p><input type="password" id="regPass" placeholder="Password">
+</div>
+<br>
+<button onclick="register()">Daftar</button>
+
+<script>
+  function register() {
+    const user = document.getElementById("regUser").value;
+    const pass = document.getElementById("regPass").value;
+
+    if (user && pass) {
+      localStorage.setItem("savedUser", user);
+      localStorage.setItem("savedPass", pass);
+      alert("Pendaftaran berhasil!");
+      window.location.href = "Index.html";
+    } else {
+      alert("Lengkapi semua kolom!");
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="Icon" href="Logo.png" class="image/png">
+  <link rel="stylesheet" href="Layanan.css" class="css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Layanan</title>
+</head>
+<body>
+  <img src="Logo.png" alt="Logo">
+  <
+  <h1>Layanan</h1>
+  <li><button onclick="chat('Saya ingin membeli panel 1gb')">Panel 1GB</button></li>
+  <br>
+  <li><button onclick="chat('Saya ingin membeli panel 2gb')">Panel 2GB</button></li>
+  <br>
+  <li><button onclick="chat('Saya ingin membeli panel 3gb')">Panel 3GB</button></li>
+  <br>
+  <li><button onclick="chat('Saya ingin membeli panel 4gb')">Panel 4GB</button></li>
+  <br>
+<li><button onclick="chat('Saya ingin membeli panel 5gb')">Panel 5GB</button></li>
+<br>
+<li><button onclick="chat('Saya ingin membeli panel 6gb')">Panel 6GB</button></li>
+<br>
+<li><button onclick="chat('Saya ingin membeli panel 7gb')">Panel 7GB</button></li>
+<br>
+<li><button onclick="chat('Saya ingin membeli panel 8gb')">Panel 8GB</button></li>
+<br>
+<li><button onclick="chat('Saya ingin membeli panel 9gb')">Panel 9GB</button></li>
+<br>
+<li><button onclick="chat('Saya ingin membeli panel Unli')">Panel Unli</button></li>
+<br>
+<li><button onclick="chat('Saya ingin membeli panel Adp')">Panel Adp</button></li>
+<br>
+<li><button onclick="chat('Saya ingin membeli panel Reseller')">Panel Reseller</button></li>
+
+<script>
+  function chat(pesan) {
+    const nomor = '6283844892149'; // Ganti dengan nomormu
+    const url = `https://wa.me/nomor?text={encodeURIComponent(pesan)}`;
+    window.open(url, '_blank');
+  }
+</script>
+</body>
+</html>

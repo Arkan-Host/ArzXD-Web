@@ -1,0 +1,42 @@
+body {
+  background-image: url("background.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  font-family: Monospace;
+}
+img {
+  display: grid;
+  place-self: center;
+  border: 5px solid black;
+  border-radius: 100px;
+  opacity: 85%;
+}
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px;
+  background-color: black;
+  opacity: 65%;
+  width: auto;
+}
+.nav a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+h1 {
+  text-align: center;
+  background-color: black;
+  opacity: 65%;
+  border-radius: 30px;
+  color: white;
+}
+h4 {
+  text-align: center;
+  background-color: black;
+  opacity: 65%;
+  color: white;
+}
